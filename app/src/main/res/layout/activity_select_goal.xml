@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    >
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select your goal"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:textColor="#c71585"
+                    android:layout_marginTop="0dp"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="MissingConstraints" />
+
+            </RelativeLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="130dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:layout_gravity="center"
+                android:background="@drawable/outline"
+                android:id="@+id/card1"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="12dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/text1"
+                        android:background="@drawable/button_background"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Financial goal"
+                        android:id="@+id/text1"
+                        android:textColor="#ff1493"
+                        android:textSize="30dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="130dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_rowWeight="1"
+                android:id="@+id/card2"
+                app:cardElevation="6dp"
+
+                app:cardCornerRadius="20dp"
+
+                android:layout_margin="12dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/text2"
+                        android:background="@drawable/button_background"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Education goal"
+                        android:textSize="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/text2"
+                        android:textColor="#ff1493"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="130dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:id="@+id/card3"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="12dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/text3"
+                        android:background="@drawable/button_background"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel goal
+"
+                        android:id="@+id/text3"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#ff1493"
+                        android:layout_marginTop="12dp"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:layout_height="130dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:id="@+id/card4"
+                app:cardCornerRadius="20dp"
+
+                android:layout_margin="12dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/text4"
+                        android:background="@drawable/button_background"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health goal
+"
+                        android:id="@+id/text4"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30dp"
+                        android:textColor="#ff1493"
+                        android:layout_marginTop="12dp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
