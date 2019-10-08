@@ -11,18 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".payment"></activity>
-        <activity
-            android:name=".ui.login.test"
-            android:label="@string/title_activity_test" />
+
         <activity
             android:name=".user"
             android:label="@string/title_activity_user"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".user"
             android:label="@string/title_activity_user"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="DuplicateActivity" />
+        <activity android:name=".MainActivity"/>
         <activity android:name=".Main2Activity" />
         <activity android:name=".Health" />
         <activity android:name=".travel" />
@@ -37,7 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

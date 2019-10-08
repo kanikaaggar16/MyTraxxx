@@ -17,18 +17,18 @@ import com.google.firebase.auth.FirebaseAuth;
 public class registeration extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private EditText emailt , passwordt ,cpasswordt;
-    private Button register , signin;
+    private EditText emailt, passwordt, cpasswordt;
+    private Button register, signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeration);
-        signin = (Button)findViewById(R.id.tuser);
-        register = (Button)findViewById(R.id.register);
-        emailt = (EditText)findViewById(R.id.edit_text1);
-        cpasswordt = (EditText)findViewById(R.id.edit_text3);
-        passwordt = (EditText)findViewById(R.id.edit_text2);
+        signin = (Button) findViewById(R.id.tuser);
+        register = (Button) findViewById(R.id.register);
+        emailt = (EditText) findViewById(R.id.edit_text1);
+        cpasswordt = (EditText) findViewById(R.id.edit_text3);
+        passwordt = (EditText) findViewById(R.id.edit_text2);
         mAuth = FirebaseAuth.getInstance();
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,25 +36,8 @@ public class registeration extends AppCompatActivity {
                 String email = emailt.getText().toString();
                 String password = passwordt.getText().toString();
                 String confirm = cpasswordt.getText().toString();
-                if(email.isEmpty())
-                {
-                    emailt.setError("Please enter email");
-                    emailt.requestFocus();
-                }
-                else if(password.isEmpty())
-                {
-                    emailt.setError("Please enter email");
-                    emailt.requestFocus();
-                }
-                else if(email.isEmpty() && password.isEmpty())
-                {
-                    Toast.makeText(registeration.this,"Please fill the fields",Toast.LENGTH_SHORT).show();
-                }
-                else if(confirm != password) {
-                Toast.makeText(registeration.this,"Password does not match",Toast.LENGTH_SHORT).show();
-                }
-                else if(!(email.isEmpty() && password.isEmpty()))
-                {
+
+                if (validateData(email,password,confirm)){
                     mAuth.createUserWithEmailAndPassword(email , password).addOnCompleteListener(registeration.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -71,10 +54,7 @@ public class registeration extends AppCompatActivity {
                         }
                     });
                 }
-                else
-                {
-                    Toast.makeText(registeration.this,"Error Occurred",Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
 
@@ -82,9 +62,25 @@ public class registeration extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(registeration.this,MainActivity.class);
+                Intent i = new Intent(registeration.this, MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }
+
+    private boolean validateData(String email, String password, String cpassword){
+        if (!email.isEmpty()) {
+            if (!password.equals(cpassword)) {
+                Toast.makeText(registeration.this, "Password must match.", Toast.LENGTH_SHORT).show();
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            Toast.makeText(registeration.this, "Email must not be empty.", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
 }

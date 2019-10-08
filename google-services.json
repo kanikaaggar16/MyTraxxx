@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336458805082",
+    "firebase_url": "https://traxx-2ebfd.firebaseio.com",
+    "project_id": "traxx-2ebfd",
+    "storage_bucket": "traxx-2ebfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336458805082:android:a19686445a557826",
+        "android_client_info": {
+          "package_name": "com.example.demo.mytraxxx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336458805082-c3b5tvh3lctv1kghtu01fs3pdvq85av1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demo.mytraxxx",
+            "certificate_hash": "75bb52e1edcba25ffc591dd3a87d86c7b99ebec8"
+          }
+        },
+        {
+          "client_id": "336458805082-5kf8fhhl977ksp9ntoepgejj8k94b9qi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmj8QPJqG_gt650JoW73pTRtCe3QMdL60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336458805082-5kf8fhhl977ksp9ntoepgejj8k94b9qi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
