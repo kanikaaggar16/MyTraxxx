@@ -17,6 +17,7 @@
         android:textColor="#ff1493"
         android:layout_marginTop="560dp"/>
     <EditText
+        android:id="@+id/enterAmountET"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="595dp"
